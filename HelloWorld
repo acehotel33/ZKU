@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.7;
+
+// Create a contract for storing and retrieving a number
+contract HelloWorld {
+    uint number; // declare an unsigned integer called number; by default equal to 0
+
+    // create a storeNumber function that takes in one argument, a uint, is public, and does not return anything
+    function storeNumber(uint _num) public {
+        number = _num; // store the _num input in the number variable
+    }
+
+    // create a retrieveNumber function that has no input arguments, is public, and returns a uint;
+    // this is a view function since it does not write to blockchain and simply reads off of it
+    function retrieveNumber() public view returns(uint) {
+        return number; // return the value of the number variable
+    }
+}
